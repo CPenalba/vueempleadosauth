@@ -16,4 +16,17 @@ export default class ServiceEmpleado {
         });
     });
   }
+
+  getPerfilEmpleado() {
+    return new Promise(function (resolve) {
+      let request = "api/Empleados/PerfilEmpleado";
+      let url = Global.urlApiEmpleados + request;
+      let headers = {
+        Authorization: `Bearer ${Global.token}`,
+      };
+      axios.get(url, { headers }).then((response) => {
+        resolve(response);
+      });
+    });
+  }
 }
