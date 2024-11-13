@@ -2,7 +2,6 @@
   <div>
     <div v-if="!token && !status">
       <h2>No has hecho login</h2>
-
       <button class="btn btn-primary" @click="goToLogin">Ir a Login</button>
     </div>
     <div v-else-if="status == true">

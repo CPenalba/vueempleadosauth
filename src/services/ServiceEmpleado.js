@@ -29,4 +29,16 @@ export default class ServiceEmpleado {
       });
     });
   }
+  getSubordinados() {
+    return new Promise(function (resolve) {
+      let request = "api/Empleados/Subordinados";
+      let url = Global.urlApiEmpleados + request;
+      let headers = {
+        Authorization: `Bearer ${Global.token}`,
+      };
+      axios.get(url, { headers }).then((response) => {
+        resolve(response);
+      });
+    });
+  }
 }

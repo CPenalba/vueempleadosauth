@@ -27,6 +27,11 @@
                 >Perfil empleado</router-link
               >
             </li>
+            <li className="nav-item">
+              <router-link class="nav-link active" to="/subordinados"
+                >Subordinados</router-link
+              >
+            </li>
 
             <li className="nav-item dropdown">
               <a
